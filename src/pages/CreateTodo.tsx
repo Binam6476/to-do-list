@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TodoFormSchema } from "../schema/schema";
 import type { z } from "zod";
 import { useTodos } from "../context/TodoContext";
-import { STATUS_META, STATUS_ORDER } from "../types";
+// import { STATUS_META, STATUS_ORDER } from "../types";
 import { useParams } from "react-router-dom";
 import { Calendar } from "../components/ui/calendar";
 import { Button } from "@/components/ui/button"
@@ -17,15 +17,14 @@ import {
 } from "@/components/ui/popover"
 
 function CreateTodo() {
-const [editId, setEditId]=useState<string | null>(null)
+const [editId, setEditId]=useState<string | null>()
   const {
     todos,
     addTodo,
-    deleteTodo,
+    // deleteTodo,
     updateTodo,
-    setStatus,
-    clearTodos,
-    counters,
+    // setStatus,
+    // clearTodos,
   } = useTodos();
 
 const {id}=useParams();
